@@ -1,7 +1,10 @@
-logs/*
-!.gitkeep
-node_modules/
-bower_components/
-tmp
 .DS_Store
-.idea
+.nodemonignore
+.sass-cache/
+npm-debug.log
+node_modules/
+public/lib
+app/tests/coverage/
+.bower-*/
+.idea/
+config/sslcert/*.pem
