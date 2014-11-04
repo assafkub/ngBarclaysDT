@@ -63,6 +63,10 @@ angular.module('articles').run(['Menus',
 		Menus.addMenuItem('topbar', 'Articles', 'articles', 'dropdown', '/articles(/create)?');
 		Menus.addSubMenuItem('topbar', 'articles', 'List Articles', 'articles');
 		Menus.addSubMenuItem('topbar', 'articles', 'New Article', 'articles/create');
+		Menus.addMenuItem('locale', 'Choose Language', 'locales', 'dropdown', '/articles(/create)?');
+		Menus.addSubMenuItem('locale', 'locales', 'English', 'articles');
+		Menus.addSubMenuItem('locale', 'locales', 'German', 'articles/create');
+		
 	}
 ]);
 'use strict';
