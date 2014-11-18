@@ -12,24 +12,25 @@ angular.module('core').service('Menus', [
 
 		// A private function for rendering decision 
 		var shouldRender = function(user) {
-			if (user) {
-				if (!!~this.roles.indexOf('*')) {
-					return true;
-				} else {
-					for (var userRoleIndex in user.roles) {
-						for (var roleIndex in this.roles) {
-							if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
-								return true;
-							}
-						}
-					}
-				}
-			} else {
-				return this.isPublic;
-			}
+//			if (user) {
+//				if (!!~this.roles.indexOf('*')) {
+//					return true;
+//				} else {
+//					for (var userRoleIndex in user.roles) {
+//						for (var roleIndex in this.roles) {
+//							if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
+//								return true;
+//							}
+//						}
+//					}
+//				}
+//			} else {
+//				return this.isPublic;
+//			}
 
-			return false;
+			return true;
 		};
+		
 
 		// Validate menu existance
 		this.validateMenuExistance = function(menuId) {
@@ -163,5 +164,6 @@ angular.module('core').service('Menus', [
 		//Adding the topbar menu
 		this.addMenu('topbar');
 		this.addMenu('locale');
+		this.addMenu('admin');
 	}
 ]);

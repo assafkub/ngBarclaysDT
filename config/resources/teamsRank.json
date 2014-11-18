@@ -1,0 +1,187 @@
+{
+   "league": "Premier League 2014/15",
+   "ranking": [
+      [
+         {
+            "rank": 1,
+            "team": "Chelsea FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/5/5c/Chelsea_crest.svg",
+            "points": 26,
+            "goals": 26,
+            "goalsAgainst": 10,
+            "goalDifference": 16
+         },
+         {
+            "rank": 2,
+            "team": "FC Southampton",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/c/c9/FC_Southampton.svg",
+            "points": 22,
+            "goals": 21,
+            "goalsAgainst": 5,
+            "goalDifference": 16
+         },
+         {
+            "rank": 3,
+            "team": "Manchester City FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/f/fd/ManCity.svg",
+            "points": 20,
+            "goals": 20,
+            "goalsAgainst": 10,
+            "goalDifference": 10
+         },
+         {
+            "rank": 4,
+            "team": "FC Arsenal London",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg",
+            "points": 17,
+            "goals": 18,
+            "goalsAgainst": 11,
+            "goalDifference": 7
+         },
+         {
+            "rank": 5,
+            "team": "West Ham United FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/e/e0/West_Ham_United_FC.svg",
+            "points": 17,
+            "goals": 19,
+            "goalsAgainst": 14,
+            "goalDifference": 5
+         },
+         {
+            "rank": 6,
+            "team": "Swansea City",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/a/ab/Swansea_City_Logo.svg",
+            "points": 15,
+            "goals": 13,
+            "goalsAgainst": 10,
+            "goalDifference": 3
+         },
+         {
+            "rank": 7,
+            "team": "Liverpool FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/0/0a/FC_Liverpool.svg",
+            "points": 14,
+            "goals": 13,
+            "goalsAgainst": 13,
+            "goalDifference": 0
+         },
+         {
+            "rank": 8,
+            "team": "Tottenham Hotspur FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/b/b4/Tottenham_Hotspur.svg",
+            "points": 14,
+            "goals": 13,
+            "goalsAgainst": 14,
+            "goalDifference": -1
+         },
+         {
+            "rank": 9,
+            "team": "Manchester United FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg",
+            "points": 13,
+            "goals": 16,
+            "goalsAgainst": 14,
+            "goalDifference": 2
+         },
+         {
+            "rank": 10,
+            "team": "Everton FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/f/f9/Everton_FC.svg",
+            "points": 13,
+            "goals": 19,
+            "goalsAgainst": 17,
+            "goalDifference": 2
+         },
+         {
+            "rank": 11,
+            "team": "West Bromwich Albion",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/8/8b/West_Bromwich_Albion.svg",
+            "points": 13,
+            "goals": 13,
+            "goalsAgainst": 13,
+            "goalDifference": 0
+         },
+         {
+            "rank": 12,
+            "team": "Newcastle United",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/5/56/Newcastle_United_Logo.svg",
+            "points": 13,
+            "goals": 11,
+            "goalsAgainst": 15,
+            "goalDifference": -4
+         },
+         {
+            "rank": 13,
+            "team": "Stoke City FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/a/a3/Stoke_City.svg",
+            "points": 12,
+            "goals": 10,
+            "goalsAgainst": 12,
+            "goalDifference": -2
+         },
+         {
+            "rank": 14,
+            "team": "Hull City FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/a/a9/Hull_City_AFC.svg",
+            "points": 11,
+            "goals": 13,
+            "goalsAgainst": 14,
+            "goalDifference": -1
+         },
+         {
+            "rank": 15,
+            "team": "Sunderland AFC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/6/60/AFC_Sunderland.svg",
+            "points": 11,
+            "goals": 11,
+            "goalsAgainst": 18,
+            "goalDifference": -7
+         },
+         {
+            "rank": 16,
+            "team": "Aston Villa FC",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/9/9f/Aston_Villa_logo.svg",
+            "points": 10,
+            "goals": 5,
+            "goalsAgainst": 16,
+            "goalDifference": -11
+         },
+         {
+            "rank": 17,
+            "team": "Leicester City",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png",
+            "points": 9,
+            "goals": 11,
+            "goalsAgainst": 16,
+            "goalDifference": -5
+         },
+         {
+            "rank": 18,
+            "team": "Crystal Palace",
+            "crestURI": "http://upload.wikimedia.org/wikipedia/de/b/bf/Crystal_Palace_F.C._logo_%282013%29.png",
+            "points": 9,
+            "goals": 14,
+            "goalsAgainst": 19,
+            "goalDifference": -5
+         },
+         {
+            "rank": 19,
+            "team": "Queens Park Rangers",
+            "crestURI": "",
+            "points": 7,
+            "goals": 9,
+            "goalsAgainst": 20,
+            "goalDifference": -11
+         },
+         {
+            "rank": 20,
+            "team": "Burnley",
+            "crestURI": "",
+            "points": 4,
+            "goals": 5,
+            "goalsAgainst": 19,
+            "goalDifference": -14
+         }
+      ]
+   ]
+}

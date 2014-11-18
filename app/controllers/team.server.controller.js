@@ -1,109 +1,107 @@
-//'use strict';
-//
-///**
-// * Module dependencies.
-// */
-//var mongoose = require('mongoose'),
-//	errorHandler = require('./errors.server.controller'),
-//	Team = mongoose.model('Team'),
-//	_ = require('lodash');
-//
-///**
-// * Create a Team
-// */
-//exports.create = function(req, res) {
-//	var team = new Team(req.body);
-//	article.user = req.user;
-//
-//	article.save(function(err) {
-//		if (err) {
-//			return res.status(400).send({
-//				message: errorHandler.getErrorMessage(err)
-//			});
-//		} else {
-//			res.json(article);
-//		}
-//	});
-//};
-//
-///**
-// * Show the current article
-// */
-//exports.read = function(req, res) {
-//	res.json(req.article);
-//};
-//
-///**
-// * Update a article
-// */
-//exports.update = function(req, res) {
-//	var article = req.article;
-//
-//	article = _.extend(article, req.body);
-//
-//	article.save(function(err) {
-//		if (err) {
-//			return res.status(400).send({
-//				message: errorHandler.getErrorMessage(err)
-//			});
-//		} else {
-//			res.json(article);
-//		}
-//	});
-//};
-//
-///**
-// * Delete an article
-// */
-//exports.delete = function(req, res) {
-//	var article = req.article;
-//
-//	article.remove(function(err) {
-//		if (err) {
-//			return res.status(400).send({
-//				message: errorHandler.getErrorMessage(err)
-//			});
-//		} else {
-//			res.json(article);
-//		}
-//	});
-//};
-//
-///**
-// * List of Articles
-// */
-//exports.list = function(req, res) {
-//	Article.find().sort('-created').populate('user', 'displayName').exec(function(err, articles) {
-//		if (err) {
-//			return res.status(400).send({
-//				message: errorHandler.getErrorMessage(err)
-//			});
-//		} else {
-//			res.json(articles);
-//		}
-//	});
-//};
-//
-///**
-// * Article middleware
-// */
-//exports.articleByID = function(req, res, next, id) {
-//	Article.findById(id).populate('user', 'displayName').exec(function(err, article) {
-//		if (err) return next(err);
-//		if (!article) return next(new Error('Failed to load article ' + id));
-//		req.article = article;
-//		next();
-//	});
-//};
-//
-///**
-// * Article authorization middleware
-// */
-//exports.hasAuthorization = function(req, res, next) {
-//	if (req.article.user.id !== req.user.id) {
-//		return res.status(403).send({
-//			message: 'User is not authorized'
-//		});
-//	}
-//	next();
-//};
+'use strict';
+
+/**
+ * Module dependencies.
+ */
+var mongoose = require('mongoose'),
+	errorHandler = require('./errors.server.controller'),
+	Team = mongoose.model('Team'),
+	_ = require('lodash');
+
+/**
+ * Create a Team
+ */
+exports.create = function(req, res) {
+	var team = new Team(req.body);
+	team.save(function(err) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			} else {
+				res.json(team);
+			}
+		});
+
+};
+
+/**
+ * Show the current team
+ */
+exports.read = function(req, res) {
+	res.json(req.team);
+};
+
+/**
+ * Update a article
+ */
+exports.update = function(req, res) {
+	var team = req.team;
+
+	team = _.extend(team, req.body);
+
+	team.save(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.json(team);
+		}
+	});
+};
+
+/**
+ * Delete an article
+ */
+exports.delete = function(req, res) {
+	var team = req.team;
+
+	team.remove(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.json(team);
+		}
+	});
+};
+
+/**
+ * List of Teams
+ */
+exports.list = function(req, res) {
+	Team.find().sort('name').exec(function(err, teams) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.json(teams);
+		}
+	});
+};
+/**
+ * Article middleware
+ */
+exports.teamByID = function(req, res, next, id) {
+	Team.findById(id).exec(function(err, team) {
+		if (err) return next(err);
+		if (!team) return next(new Error('Failed to load team ' + id));
+		req.team = team;
+		next();
+	});
+};
+
+/**
+ * Article authorization middleware
+ */
+exports.hasAuthorization = function(req, res, next) {
+	if (!req.team) {
+		return res.status(403).send({
+			message: 'User is not authorized'
+		});
+	}
+	next();
+};

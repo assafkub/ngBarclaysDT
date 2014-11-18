@@ -11,7 +11,14 @@ var mongoose = require('mongoose'),
  */
 var TeamSchema = new Schema({
 	name:String,
-	rank:Number
+	rank:Number,
+	apiId:Number,
+	logoURL:String,
+	shortName: String,
+	points:Number,
+	goals:Number,
+	goalsAgainst:Number,
+	goalDifference:Number
 	
 });
 
