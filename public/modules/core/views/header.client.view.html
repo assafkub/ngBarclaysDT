@@ -33,7 +33,7 @@
 				</a>
 				<ul ng-switch-when="dropdown" class="dropdown-menu">
 					<li data-ng-repeat="subitem in item.items | orderBy: 'position'" data-ng-if="subitem.shouldRender(authentication.user);" ui-route="{{subitem.uiRoute}}" ng-class="{active: $uiRoute}">
-						<a data-ng-click="updateDB()"  data-ng-bind="subitem.title"></a>
+						<a data-ng-click="subitem.callback()"  data-ng-bind="subitem.title"></a>
 					</li>
 				</ul>
 				<a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
@@ -66,7 +66,7 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-left">
 			<li ui-route="/myteams" ng-class="{active: $uiRoute}">
-				<a href="/#!/myteams">{{ 'myTeam' | translate }}</a>
+				<a href="/#!/pl-table">{{ 'standing' | translate }}</a>
 			</li>
 			<li class="divider-vertical"></li>
 			<li ui-route="/substitutions" ng-class="{active: $uiRoute}">

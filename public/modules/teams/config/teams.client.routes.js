@@ -5,13 +5,17 @@ angular.module('team').config(['$stateProvider',
 	function($stateProvider) {
 		// Articles state routing
 		$stateProvider.
-		state('myteams', {
-			url: '/myteams',
-			templateUrl: 'modules/teams/views/my-teams.client.view.html'
+		state('pl-table', {
+			url: '/pl-table',
+			templateUrl: 'modules/teams/views/pl-table.view.html'
 		}).
-		state('createArticle1', {
-			url: '/articles/create',
-			templateUrl: 'modules/teams/views/create-teams.client.view.html'
+		state('teamPlayers', {
+			url: '/teams/:teamId',
+			templateUrl: 'modules/teams/views/team-players.client.view.html'
+		}).
+		state('substitutions', {
+			url: '/substitutions',
+			templateUrl: 'modules/teams/views/user.substitutions.view.html'
 		});
 	}
 ]);

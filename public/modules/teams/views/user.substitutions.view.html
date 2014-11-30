@@ -1,0 +1,92 @@
+<section data-ng-controller="TeamsController" data-ng-init="find()">
+	<div class="page-header">
+		<h1>Table</h1>
+	</div>
+
+	<div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button"
+			id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"
+			data-ng-bind="dropdownMenuBtnName">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			<li ng-animate="'repeat'" role="presentation"
+				data-ng-repeat="team in teams | orderBy:'rank'"><a
+				data-ng-bind="team.name" role="menuitem" tabindex="-1"
+				data-ng-click="getTeamById(team._id)"></a></li>
+		</ul>
+	</div>
+	<div class="btn-group" role="group" aria-label="...">
+		<button type="button" class="btn btn-default"
+			data-ng-repeat="pos in playersPosition" data-ng-bind="pos"
+			data-ng-show="team" ng-class="{ active : pos == 'All'}"
+			data-ng-click="onPositionClicked(pos)"
+			id="pos_{{pos.replace(' ', '')}}"></button>
+	</div>
+	<!-- <ul class="draggable-objects">
+		<li class="draggableLi" ng-animate="'repeat'"
+			ng-repeat="obj in team.players | orderBy: 'squadNumber'"
+			data-ng-if="team && obj.position.indexOf(selectedClass) > -1 || selectedClass == 'All'">
+			<div ng-drag="true" ng-drag-data="obj">
+				<span class="squadNumber">{{obj.squadNumber}}</span> <span
+					data-ng-bind="obj.firstName + ' '  + obj.lastName"></span>
+			</div>
+		</li>
+	</ul> -->
+
+
+	<div class="mygrid-wrapper-div">
+		<table class="table">
+			<tbody>
+				<tr ng-drag="true" ng-drag-data="obj"
+					ng-repeat="obj in team.players | orderBy: 'squadNumber'"
+					data-ng-if="team && obj.position.indexOf(selectedClass) > -1 || selectedClass == 'All'"
+					class="animate-if">
+					<td>
+						<div>
+							<span data-ng-bind="obj.firstName + ' '  + obj.lastName"></span>
+						</div>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="fieldContainer" ng-drop="true"
+		ng-drop-success="onDropComplete($data,$event)">
+		<span class="fcSpan"> <span ng-repeat="obj in droppedFc"
+			ng-drag="true" ng-drag-data="obj"
+			ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></span>
+		</span> <span class="mcSpan"> <span ng-repeat="obj in droppedMc"
+			ng-drag="true" ng-drag-data="obj"
+			ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></span>
+		</span> <span class="dcSpan"> <span
+			ng-repeat="obj in droppedDc" ng-drag="true" ng-drag-data="obj"
+			ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></span>
+		</span> <span class="gkSpan"><span ng-repeat="obj in droppedGk"
+			ng-drag="true" ng-drag-data="obj"
+			ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></span></span>
+	</div>
+	<!-- <div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+		<div ng-repeat="obj in droppedObjects1" ng-drag="true"
+			ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-if="obj && isFC(obj)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></div>
+
+		<div ng-repeat="obj in droppedObjects1" ng-drag="true"
+			ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-if="obj && isMC(obj)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></div>
+
+		<div ng-repeat="obj in droppedObjects1" ng-drag="true"
+			ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)"
+			data-ng-if="obj && isGK(obj)"
+			data-ng-bind="obj.firstName + ' '  + obj.lastName"></div>
+
+	</div> -->
+
+</section>

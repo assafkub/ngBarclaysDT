@@ -1,0 +1,37 @@
+<section data-ng-controller="TeamsController" data-ng-init="findOne()">
+	<div class="page-header">
+		<img style="height:64px; width:64px;" data-ng-src="{{team.logoURL}}"/><h1 data-ng-bind="team.name"></h1>
+	</div>
+	<div class="col-md-12">
+	
+		<table class="table table-striped table-bordered table-hover table-condensed">
+<colgroup>
+       <col span="1" style="width: 1%;">
+       <col span="1" style="width: 1%;">
+       <col span="1" style="width: 22%;">
+    </colgroup>
+            <tr>
+                <th>{{ '#' | translate }}</th><th>{{ 'name' | translate }}</th>
+                <th>{{ 'position' | translate }}</th><th>{{ 'nationality' | translate }}</th><th>{{ 'appearances' | translate }}</th><th>{{ 'substitutions' | translate }}</th>
+                <th>{{ 'goals' | translate }}</th><th>{{ 'penalties' | translate }}</th>
+            </tr>
+            <tr  data-ng-href="#!/teams/{{team._id}}"  data-ng-repeat="player in team.players | orderBy:'squadNumber'" >
+            	<td><h4  data-ng-bind="player.squadNumber"></h4></td>
+               <td><h4  data-ng-bind="player.firstName"></h4> <h4  data-ng-bind="player.lastName"></h4></td>
+               <td><h4  data-ng-bind="player.position"></h4></td>
+               <td><h4  data-ng-bind="player.nationality"></h4></td>
+               <td><h4  data-ng-bind="player.appearances"></h4></td>
+               <td><h4  data-ng-bind="player.substitutions"></h4></td>
+               <td><h4  data-ng-bind="player.goals"></h4></td>
+               <td><h4  data-ng-bind="player.penalties"></h4></td>
+            <!-- <td>
+            	<h4  data-ng-bind="player.firstName"></h4></a>
+            </td>
+            <td><h4  data-ng-bind="team.goals"></h4></td>
+            <td><h4  data-ng-bind="team.goalsAgainst"></h4></td>
+            <td><h4  data-ng-bind="team.goalDifference"></h4></td>
+            <td><h4  data-ng-bind="team.points"></h4></td> -->
+            </tr>
+        </table>
+	</div>
+</section>

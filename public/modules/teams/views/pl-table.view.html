@@ -18,7 +18,9 @@
             <tr  data-ng-href="#!/teams/{{team._id}}"  data-ng-repeat="team in teams | orderBy:'rank'" >
                <td><img style="height:64px; width:64px;" data-ng-src="{{team.logoURL}}"/></td>
                <td><h4  data-ng-bind="team.rank"></h4></td>
-            <td><span data-ng-bind="team.name"></span></td>
+            <td>
+            	<a data-ng-href="#!/teams/{{team._id}}" data-ng-bind="team.name"></a>
+            </td>
             <td><h4  data-ng-bind="team.goals"></h4></td>
             <td><h4  data-ng-bind="team.goalsAgainst"></h4></td>
             <td><h4  data-ng-bind="team.goalDifference"></h4></td>

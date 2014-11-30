@@ -11,6 +11,6 @@ angular.module('articles').run(['Menus',
 		Menus.addSubMenuItem('locale', 'articles', 'English', 'en');
 		Menus.addSubMenuItem('locale', 'articles', 'Hebrew', 'he');
 		Menus.addMenuItem('admin', 'Admin', '/#', 'dropdown', '/#', false ,['admin']);
-		Menus.addSubMenuItem('admin', '/#', 'Update Table', '/#', false ,['admin']);
+		
 	}
 ]);

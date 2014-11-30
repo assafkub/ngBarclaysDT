@@ -11,14 +11,21 @@ var mongoose = require('mongoose'),
  */
 var PlayerSchema = new Schema({
 	firstName:String,
-	LastName:String,
+	lastName:String,
 	value:Number,
 	team: {
 		type: Schema.ObjectId,
 		ref: 'Team'
 	},
-	position:String
-	
+	position:String,
+	squadNumber: Number,
+	nationality:String,
+	appearances: Number,
+	substitutions: Number,
+	goals: Number,
+	penalties: Number,
+	yCards: Number,
+	rCards: Number
 });
 
 mongoose.model('Player', PlayerSchema);
